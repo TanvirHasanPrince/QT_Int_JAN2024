@@ -1,5 +1,5 @@
 import Link from "next/link";
-import MenuItems from "./MenuItems";
+import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
   return (
@@ -12,7 +12,9 @@ const Navbar = () => {
         <ul className="flex items-center ml-5"></ul>
       </div>
 
-      <MenuItems />
+      <div>
+        <DropdownMenu />
+      </div>
     </header>
   );
 };
