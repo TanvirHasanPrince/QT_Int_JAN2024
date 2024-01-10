@@ -13,7 +13,7 @@ const DropdownMenu = () => {
     <div className="relative inline-block text-left">
       <button
         type="button"
-        className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring focus:border-blue-300"
+        className="inline-flex justify-center w-full px-4 py-2 md:text-lg lg:text-lg font-bold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring focus:border-blue-300"
         onClick={toggleDropdown}
       >
         Menu
@@ -53,8 +53,8 @@ const DropdownMenu = () => {
       </button>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
+        <div className="origin-top-right absolute right-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="py-1 flex flex-col items-center justify-center text-center">
             <a
               href="#"
               className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-orange-500"
