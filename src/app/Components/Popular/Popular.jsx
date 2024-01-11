@@ -7,10 +7,20 @@ import { LiaGreaterThanSolid, LiaLessThanSolid } from "react-icons/lia";
 const Popular = () => {
   const [data, setData] = useState(null);
   const [formData, setFormData] = useState({
-    itemName: "",
-    itemImageUrl: "",
+    Name: "",
+    Price: "",
+    ImageUrl: "",
+    IsPopular: "",
+    IsRecommended: "",
   });
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [formErrors, setFormErrors] = useState({
+    Name: "",
+    Price: "",
+    ImageUrl: "",
+    IsPopular: "",
+    IsRecommended: "",
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,10 +57,53 @@ const Popular = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    setFormErrors({
+      ...formErrors,
+      [e.target.name]: "",
+    });
+  };
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = { ...formErrors };
+
+    if (!formData.Name) {
+      newErrors.Name = "Name is required";
+      valid = false;
+    }
+
+    if (!formData.Price) {
+      newErrors.Price = "Price is required";
+      valid = false;
+    }
+    if (!formData.ImageUrl) {
+      newErrors.ImageUrl = "ImageUrl is required";
+      valid = false;
+    }
+    if (formData.IsPopular !== "true" && formData.IsPopular !== "false") {
+      newErrors.IsPopular = "Please enter either 'true' or 'false'";
+      valid = false;
+    }
+
+    if (
+      formData.IsRecommended !== "true" &&
+      formData.IsRecommended !== "false"
+    ) {
+      newErrors.IsRecommended = "Please enter either 'true' or 'false'";
+      valid = false;
+    }
+
+    setFormErrors(newErrors);
+    return valid;
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
 
     setData((prevData) => ({
       ...prevData,
@@ -60,7 +113,7 @@ const Popular = () => {
           Id: Date.now(),
           Name: formData.Name,
           Price: formData.Price,
-          ImageUrl: formData.itemImageUrl,
+          ImageUrl: formData.ImageUrl,
           IsPopular: formData.IsPopular,
           IsRecommended: formData.IsRecommended,
         },
@@ -149,6 +202,8 @@ const Popular = () => {
             placeholder="Name"
             className="border border-gray-300 p-2 rounded mb-2"
           />
+          {formErrors.Name && <p className="text-red-500">{formErrors.Name}</p>}
+
           <input
             type="text"
             name="Price"
@@ -157,6 +212,10 @@ const Popular = () => {
             placeholder="Price"
             className="border border-gray-300 p-2 rounded mb-2"
           />
+          {formErrors.Price && (
+            <p className="text-red-500">{formErrors.Price}</p>
+          )}
+
           <input
             type="text"
             name="ImageUrl"
@@ -165,22 +224,34 @@ const Popular = () => {
             placeholder="ImageUrl"
             className="border border-gray-300 p-2 rounded mb-2"
           />
+          {formErrors.ImageUrl && (
+            <p className="text-red-500">{formErrors.ImageUrl}</p>
+          )}
+
           <input
             type="text"
             name="IsPopular"
             value={formData.IsPopular}
             onChange={handleInputChange}
-            placeholder="Only write ture or false"
+            placeholder="Is Popular? Only write true or false"
             className="border border-gray-300 p-2 rounded mb-2"
           />
+          {formErrors.IsPopular && (
+            <p className="text-red-500">{formErrors.IsPopular}</p>
+          )}
+
           <input
             type="text"
             name="IsRecommended"
             value={formData.IsRecommended}
             onChange={handleInputChange}
-            placeholder="Only write ture or false"
+            placeholder="Is Recommended? Only write true or false"
             className="border border-gray-300 p-2 rounded mb-2"
           />
+          {formErrors.IsRecommended && (
+            <p className="text-red-500">{formErrors.IsRecommended}</p>
+          )}
+
           <button
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded"
