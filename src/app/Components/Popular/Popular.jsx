@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 "use client";
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
@@ -26,7 +26,7 @@ const Popular = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://cors-anywhere.herokuapp.com/http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+          "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
         );
         if (response.ok) {
           const result = await response.json();
