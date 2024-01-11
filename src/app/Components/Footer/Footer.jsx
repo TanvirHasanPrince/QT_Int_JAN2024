@@ -25,8 +25,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-start items-center flex-col-reverse md:flex-row lg:flex-row ">
-          <div className="">
-            <h1 className="md:text-black lg:text-black text-black md:text-4xl lg:text-4xl text-2xl text-left font-bold">
+          <div className="mt-4 md:mt-0 lg:mt-0">
+            <h1 className="md:text-black lg:text-black text-black md:text-4xl lg:text-4xl text-2xl lg:text-left md:text-left text-center font-bold">
               pti<span className="text-orange-700 text-4xl font-bold">.</span>
             </h1>
             <p className="md:text-black-300 lg:text-black-300 text-black text-left p-2 text-sm md:text-xl lg:text-xl">
