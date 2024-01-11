@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 const Banner = () => {
   return (
     <div className=" mt-10 border rounded-2xl md:bg-orange-500 lg:bg-orange-500 bg-none flex flex-col md:flex-row lg:flex-row justify-center items-center">
