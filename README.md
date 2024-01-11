@@ -20,7 +20,7 @@ I have implemented a form on the webpage that allows users to add items to the l
 
 ## How to Use
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone the repository: `git clone https://github.com/TanvirHasanPrince/QT_Int_JAN2024.git`
 2. Navigate to the project directory: `cd your-repo`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
