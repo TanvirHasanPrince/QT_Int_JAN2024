@@ -28,7 +28,7 @@ I have implemented a form on the webpage that allows users to add items to the l
 
 ## Live Demo
 
-The project is live on Vercel. Check it out [here](Your_Live_Demo_Link).
+The project is live on Vercel. Check it out [here](https://qt-int-jan-2024.vercel.app/).
 
 ## Contact
 
