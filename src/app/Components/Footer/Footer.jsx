@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <div className="mt-10 border rounded-2xl bg-orange-300  bg-none flex flex-col md:flex-row lg:flex-row justify-between items-center">
       <div className=" md:grow lg:grow md:pl-40 lg:pl-40  p-10 ">
-        <div className="flex items-center justify-start md:mb-20 lg:mb-20 mb-10">
-          <div className="relative">
+        <div className="flex items-center justify-start md:mb-20 lg:mb-20 ">
+          <div className="relative ">
             <input
               type="text"
               id="email"
               placeholder="Enter your email"
-              className="pl-6 pr-2 border border-gray-300 p-2 rounded-full sm:pl-2 sm:p-2 sm:rounded-2xl focus:outline-none focus:ring focus:border-orange-300 w-96 z-0"
+              className="md:pl-6 lg:pl-6 md:pr-2 lg:pr-2 border border-gray-300 p-2 rounded-full focus:outline-none focus:ring focus:border-orange-300 md:w-96 lg:w-96 w-80 z-0"
             />
             <button
               type="button"
@@ -24,7 +24,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="flex justify-start items-center ">
+        <div className="flex justify-start items-center flex-col-reverse md:flex-row lg:flex-row ">
           <div className="">
             <h1 className="md:text-black lg:text-black text-black md:text-4xl lg:text-4xl text-2xl text-left font-bold">
               pti<span className="text-orange-700 text-4xl font-bold">.</span>
