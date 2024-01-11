@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
-      "lh3.googleusercontent.com",
+      "www.api.technicaltest.quadtheoryltd.com",
       "images.pexels.com",
       "images.unsplash.com",
     ],
