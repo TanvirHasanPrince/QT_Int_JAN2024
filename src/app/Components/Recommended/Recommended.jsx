@@ -37,7 +37,7 @@ const Recommended = () => {
    };
 
    const items = data?.Items;
-   console.log(items);
+
   return (
     <div className="mt-20">
       <div className="flex  flex-col">
