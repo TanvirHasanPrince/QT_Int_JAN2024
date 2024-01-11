@@ -1,4 +1,3 @@
-
 ## Welcome!
 
 Welcome! This project is a webpage built using Next.js, Tailwind CSS, and React Modal. The goal was to create a visually appealing webpage based on a provided design, fetch data from a specified API, and implement a form for adding items.
@@ -7,8 +6,7 @@ Welcome! This project is a webpage built using Next.js, Tailwind CSS, and React 
 
 ### UI Design
 
-I have created the design, gave close attention to colors, fonts, and overall layout. The webpage includes a button that opens a modal for adding new cards, which will not POST the data to the server but will so the data in the cards. 
-
+I have created the design, gave close attention to colors, fonts, and overall layout. The webpage includes a button that opens a modal for adding new cards, which will not POST the data to the server but will so the data in the cards.
 
 ### Form for Adding Items
 
@@ -35,5 +33,3 @@ The project is live on Vercel. Check it out [here](Your_Live_Demo_Link).
 ## Contact
 
 For any questions or feedback, feel free to reach out to me at [t.hasan.prince@gmail.com].
-
-
