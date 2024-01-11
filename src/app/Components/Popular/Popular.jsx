@@ -26,7 +26,7 @@ const Popular = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
+          "https://cors-anywhere.herokuapp.com/http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10"
         );
         if (response.ok) {
           const result = await response.json();
