@@ -6,15 +6,15 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="mt-10 border rounded-2xl md:bg-orange-300 lg:bg-orange-300 bg-none flex flex-col md:flex-row lg:flex-row justify-between items-center">
-      <div className=" grow pl-40 ">
-        <div className="flex items-center justify-start mb-20">
+    <div className="mt-10 border rounded-2xl bg-orange-300  bg-none flex flex-col md:flex-row lg:flex-row justify-between items-center">
+      <div className=" md:grow lg:grow md:pl-40 lg:pl-40  p-10 ">
+        <div className="flex items-center justify-start md:mb-20 lg:mb-20 mb-10">
           <div className="relative">
             <input
               type="text"
               id="email"
               placeholder="Enter your email"
-              className="pl-6 pr-2 border border-gray-300 p-2 rounded-full sm:pl-8 sm:p-2 sm:rounded-2xl focus:outline-none focus:ring focus:border-orange-300 w-96 z-0"
+              className="pl-6 pr-2 border border-gray-300 p-2 rounded-full sm:pl-2 sm:p-2 sm:rounded-2xl focus:outline-none focus:ring focus:border-orange-300 w-96 z-0"
             />
             <button
               type="button"
@@ -24,8 +24,8 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="flex justify-start items-center">
-          <div>
+        <div className="flex justify-start items-center ">
+          <div className="">
             <h1 className="md:text-black lg:text-black text-black md:text-4xl lg:text-4xl text-2xl text-left font-bold">
               pti<span className="text-orange-700 text-4xl font-bold">.</span>
             </h1>
@@ -33,14 +33,14 @@ const Footer = () => {
               Copyright© Tripp. All Right Reserved
             </p>
           </div>
-          <div className="flex items-center justify-between mt-10 ml-10 gap-2">
+          <div className="flex items-center justify-between mt-10 ml-10 gap-2 ">
             <FaGoogle className="w-8 h-8 p-2 text-orange-500 rounded-full bg-orange-100" />
             <FaTwitter className="w-8 h-8 p-2 text-orange-500 rounded-full bg-orange-100" />
             <FaInstagram className="w-8 h-8 p-2 text-orange-500 rounded-full bg-orange-100" />
           </div>
         </div>
       </div>
-      <div className="bg-orange-300 lg:bg-none md:bg-none rounded-3xl">
+      <div className="bg-orange-300 lg:bg-none md:bg-none hidden md:block lg:block rounded-3xl">
         <img
           src="https://i.ibb.co/9gGmDkh/Image2.png"
           alt="Tripp Logo"
