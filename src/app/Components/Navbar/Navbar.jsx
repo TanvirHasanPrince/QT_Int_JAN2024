@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";
 import { FaUserCircle } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
