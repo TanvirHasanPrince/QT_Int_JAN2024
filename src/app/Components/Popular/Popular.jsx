@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { LiaGreaterThanSolid, LiaLessThanSolid } from "react-icons/lia";
+import Image from "next/image";
 
 const Popular = () => {
   const [data, setData] = useState(null);
@@ -173,9 +174,11 @@ const Popular = () => {
                   .filter((item) => item.IsPopular)
                   .map((item) => (
                     <div key={item.Id} className="flex-shrink-0 mx-2">
-                      <img
+                      <Image
                         src={item.ImageUrl}
                         alt=""
+                        width={220}
+                        height={220}
                         key={item.Id}
                         className="w-[220px] h-[220px] p-2 hover:scale-105 ease-in-out duration-300"
                       />
